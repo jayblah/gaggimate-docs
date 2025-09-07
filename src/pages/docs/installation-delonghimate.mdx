@@ -1,0 +1,159 @@
+---
+layout: ../../layouts/Layout.astro
+title: DeLonghi ECP
+description: Installation procedure for DeLonghi ECP machines
+section: Installation
+order: 13
+---
+
+import Preview from '../../components/Preview.astro';
+import img_01 from '../../assets/images/gcp/01_parts.jpeg';
+import img_02 from '../../assets/images/gcp/02_parts.jpeg';
+import img_03 from '../../assets/images/gcp/03_screen_glue.jpeg';
+import img_04 from '../../assets/images/gcp/04_screen_assemble.jpeg';
+import img_05 from '../../assets/images/gcp/05_pcb_assemble.jpeg';
+import img_06 from '../../assets/images/gcp/06_pcb_assemble.jpeg';
+import img_07 from '../../assets/images/gcp/07_machine_clear.jpeg';
+import img_08 from '../../assets/images/gcp/08_machine_open.jpeg';
+import img_09 from '../../assets/images/gcp/09_cup_warmer.jpeg';
+import img_10 from '../../assets/images/gcp/10_overview.jpeg';
+import img_11 from '../../assets/images/gcp/11_stock_buttons.jpeg';
+import img_12 from '../../assets/images/gcp/12_tilt_buttons.jpeg';
+import img_13 from '../../assets/images/gcp/13_tilt_buttons.jpeg';
+import img_14 from '../../assets/images/gcp/14_monoblocks.jpeg';
+import img_15 from '../../assets/images/gcp/15_labeling.jpeg';
+import img_16 from '../../assets/images/gcp/16_labeling.jpeg';
+import img_17 from '../../assets/images/gcp/17_steam_valve.jpeg';
+import img_18 from '../../assets/images/gcp/18_group_head.jpeg';
+import img_19 from '../../assets/images/gcp/19_brew_thermostat.jpeg';
+import img_20 from '../../assets/images/gcp/20_bt_bridge.jpeg';
+import img_21 from '../../assets/images/gcp/21_thermocouple.jpeg';
+import img_22 from '../../assets/images/gcp/22_thermocouple.jpeg';
+import img_23 from '../../assets/images/gcp/23_steam_valve.jpeg';
+import img_24 from '../../assets/images/gcp/24_stsw_stock.jpeg';
+import img_25 from '../../assets/images/gcp/25_neutral.jpeg';
+import img_26 from '../../assets/images/gcp/26_stsw_modded.jpeg';
+import img_27 from '../../assets/images/gcp/27_brsw_stock.jpeg';
+import img_28 from '../../assets/images/gcp/28_eco.jpeg';
+import img_29 from '../../assets/images/gcp/29_line.jpeg';
+import img_30 from '../../assets/images/gcp/30_brsw_modded.jpeg';
+import img_31 from '../../assets/images/gcp/31_logic_buttons.jpeg';
+import img_32 from '../../assets/images/gcp/32_3wv.jpeg';
+import img_33 from '../../assets/images/gcp/33_pump.jpeg';
+import img_34 from '../../assets/images/gcp/34_steam_thermostat.jpeg';
+import img_35 from '../../assets/images/gcp/35_stean_thermostat.jpeg';
+import img_36 from '../../assets/images/gcp/36_ssr.jpeg';
+import img_37 from '../../assets/images/gcp/37_pcb_connections.jpeg';
+import img_38 from '../../assets/images/gcp/38_pcb_placement.jpeg';
+import img_39 from '../../assets/images/gcp/39_pressure.jpeg';
+import img_40 from '../../assets/images/gcp/40_pressure.jpeg';
+import img_41 from '../../assets/images/gcp/41_pressure.jpeg';
+import img_42 from '../../assets/images/gcp/42_pressure.jpeg';
+import img_43 from '../../assets/images/gcp/43_pressure.jpeg';
+import img_44 from '../../assets/images/gcp/44_pump_connection.jpeg';
+import img_45 from '../../assets/images/gcp/45_transducer_placement.jpeg';
+import img_46 from '../../assets/images/gcp/46_screen_placement.jpeg';
+import img_47 from '../../assets/images/gcp/47_finished.jpeg';
+import ribbon from '../../assets/images/screen_ribbon.jpeg';
+
+
+import img_101 from '../../assets/images/gcp/101_plumbing.jpeg';
+import img_102 from '../../assets/images/gcp/102_plumbing.jpeg';
+import img_103 from '../../assets/images/gcp/103_plumbing.jpeg';
+import img_104 from '../../assets/images/gcp/104_plumbing.jpeg';
+import img_105 from '../../assets/images/gcp/105_plumbing.jpeg';
+import img_106 from '../../assets/images/gcp/106_plumbing.jpeg';
+import img_107 from '../../assets/images/gcp/107_plumbing.jpeg';
+import img_108 from '../../assets/images/gcp/108_plumbing.jpeg';
+import img_109 from '../../assets/images/gcp/109_plumbing.jpeg';
+import img_110 from '../../assets/images/gcp/110_plumbing.jpeg';
+import img_111 from '../../assets/images/gcp/111_plumbing.jpeg';
+import img_112 from '../../assets/images/gcp/112_plumbing.jpeg';
+import img_113 from '../../assets/images/gcp/113_plumbing.jpeg';
+import img_114 from '../../assets/images/gcp/114_plumbing.jpeg';
+import img_115 from '../../assets/images/gcp/115_plumbing.jpeg';
+import img_116 from '../../assets/images/gcp/116_plumbing.jpeg';
+import img_117 from '../../assets/images/gcp/117_plumbing.jpeg';
+import img_118 from '../../assets/images/gcp/118_plumbing.jpeg';
+import img_119 from '../../assets/images/gcp/119_labeling.jpeg';
+
+import img_plumbing_packed from '../../assets/images/new_plumbing_packed.jpeg';
+import img_plumbing_unpacked from '../../assets/images/new_plumbing_unpacked.jpeg';
+
+import img_wrong_connector from '../../assets/images/wrong_connector.jpeg';
+import img_trimmed_connector from '../../assets/images/trimmed_connector.jpeg';
+
+
+<div class="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded relative" role="alert">
+<h3 class="my-2">Important Notes</h3>
+
+<strong class="font-bold text-red-700">High Voltage Safety</strong>: Exercise extreme caution when working with high voltage. If you are unsure about any steps, consult a professional technician. <br />
+<strong class="font-bold text-red-700">Follow Local Codes</strong>: Ensure that your work adheres to local electrical codes and standards. <br />
+<strong class="font-bold text-red-700">Documentation</strong>: Keep a record of your wiring setup for future reference and troubleshooting.
+
+</div>
+
+## Contents
+
+## 1. Preparation
+
+**Safety First!**
+Unplug your machine to ensure there's no live connections while working on it.
+Work in a dry environment to prevent electrical hazards.
+
+Start by gathering all the materials and tools listed in the sourcing pages.
+Follow the Gaggimate installation guides if you haven't already: [Flashing](/docs/flashing).
+
+Read through the entire guide first to ensure any questions will be cleared before the installation. You can always contact the Discord for help.
+
+#### Check the screen
+
+<Preview src={ribbon} width={400} alt="Screen ribbon" />
+
+Before assembling the screen, check that the ribbon is seated and locked correctly. Unlock the connector by pulling down the black locking tab, insert the cable, and close it back up.
+
+## 2. Components
+
+To get the Gaggimate to work with the DeLonghi ECP series, you must buy the following parts:
+
+> **Tip:** Buying from AliExpress can be risky. Try to prioritize buying from vendors designated as **CHOICE** even if they cost slightly more.
+
+- [Gaggimate Pro PCB](https://shop.gaggimate.eu/products/gaggimate-pro-pcb)
+  - **ALTERNATIVE:** [Gaggimate Standard PCB](https://shop.gaggimate.eu/products/gaggimate-standard-pcb)
+- [LilyGo T-RGB 2.1” Display - Full Circle](https://www.aliexpress.us/item/3256804592227662.html)
+  - **ALTERNATIVE:** [Waveshare ESP32-S3 2.8" Round Touch Dev Board w/ Touch](https://www.aliexpress.us/item/3256808829861475.html) *(make sure it’s the one with touch-screen capability!)*
+- [AC SSR 40-DA](https://www.aliexpress.us/item/3256801594490893.html)
+- [K-Type M4 0.5m thermocouple](https://www.aliexpress.us/item/3256805310471537.html)
+- [22 AWG Silicone Wire for LV wiring](https://www.aliexpress.us/item/3256807019779669.html)
+- [18 AWG Silicone Wire for HV wiring](https://www.aliexpress.us/item/3256807019333756.html)
+- [6.35mm Spade Connectors](https://www.aliexpress.us/item/3256805488096628.html)
+- [4.8mm Spade Connectors](https://www.aliexpress.us/item/2251832685618263.html)
+- [6.35mm Piggyback Connectors](https://www.aliexpress.us/item/2251832685586604.html)
+- [4.8mm Piggyback Connectors](https://www.aliexpress.us/item/3256804021386695.html)
+- [Fork connectors (SV1.25-5s)](https://www.aliexpress.us/item/3256805889663603.html)
+- [JST PH 2.0 Connectors](https://www.aliexpress.us/item/3256806312346188.html)
+- [2.0mm PA Jumper wires 4P](https://www.aliexpress.us/item/3256805930259221.html)
+- [Pressure Transducer 0-1.6MPa, 5V Supply, 0.5 - 4.5V Output](https://www.aliexpress.us/item/3256805324139332.html) *(IF USING PRO BOARD ONLY)*
+  - **ALTERNATIVE:** [Silicone gasket 1/4 inch](https://www.aliexpress.us/item/2255799841120591.html) *(IF USING PRO BOARD ONLY)*
+- [ID-2mm OD-4mm Tube](https://www.aliexpress.us/item/2251832544541096.html)
+- [4mm 5/32 inch OD Pressure T-Fitting PE](https://www.aliexpress.us/item/3256808320030680.html)
+- [4mm OD Pressure Fitting to G1/4 female PLF 04-02](https://www.aliexpress.us/item/3256802393459934.html)
+- [Screen housing for 2.1" screen ONLY](https://shop.gaggimate.eu/products/2-1-angled-screen-housing) *(OPTIONAL)*
+  - **ALTERNATIVE:** [Screen housing for the 2.8” screen ONLY](https://www.printables.com/model/1314638-lilygo-t-rgb-28-full-circle-lcd-case) *(OPTIONAL)*
+- [Gaggimate Pro PCB housing](https://shop.gaggimate.eu/products/gaggimate-pro-pcb-housing) *(OPTIONAL)*
+
+## 3. Tools / Consumables
+
+- Knife / PTFE cutter *(if you get a variant with PTFE tubing)*
+- [Crimping tool (SNA02C-06-06WF-58B)](https://www.aliexpress.us/item/2255800059894318.html)
+- Screwdriver
+- Wrench / Spanner
+- Zipties
+- Cable labels / Tape
+
+## 4. Machine Preparation
+
+Disassemble the machine: remove water lid, drip tray, portafilter, and cup warmer. Disconnect grounding wires.
+Familiarize yourself with machine layout and label all wires for reference.
+
+Note that some steps differ from the Gaggimate installation documentation. Please join Discord if you have questions. Once I have more information, I’ll add those specific steps to this document.
