@@ -18,7 +18,6 @@ import image_boiler_heater_connections from "../../assets/images/community/delon
 import image_bottom_panel from "../../assets/images/community/delonghi-ecp/image_bottom_panel.jpg";
 import image_build_jochen from "../../assets/images/community/delonghi-ecp/image_build_jochen.jpeg";
 import image_build_julia from "../../assets/images/community/delonghi-ecp/image_build_julia.jpeg";
-import image_cut_hose from "../../assets/images/community/delonghi-ecp/image_cut_hose.jpg";
 import image_frame_screws from "../../assets/images/community/delonghi-ecp/image_frame_screws.jpg";
 import image_location_pcb from "../../assets/images/community/delonghi-ecp/image_location_pcb.jpeg";
 import image_location_ssr from "../../assets/images/community/delonghi-ecp/image_location_ssr.jpeg";
@@ -29,12 +28,14 @@ import image_pressure_installation from "../../assets/images/community/delonghi-
 import image_pressure_position from "../../assets/images/community/delonghi-ecp/image_pressure_position.jpg";
 import image_pump_hoses from "../../assets/images/community/delonghi-ecp/image_pump_hoses.jpg";
 import image_rear_clips from "../../assets/images/community/delonghi-ecp/image_rear_clips.jpg";
+import image_remove_boiler_hose from "../../assets/images/community/delonghi-ecp/image_remove_boiler_hose.jpg";
 import image_screen_connection from "../../assets/images/community/delonghi-ecp/image_screen_connection.png";
 import image_ssr_wiring_of_control from "../../assets/images/community/delonghi-ecp/image_ssr_wiring_of_control.png";
 import image_thermocouple_installation from "../../assets/images/community/delonghi-ecp/image_thermocouple_installation.jpg";
 import image_thermostats from "../../assets/images/community/delonghi-ecp/image_thermostats.jpg";
 import image_top_screws from "../../assets/images/community/delonghi-ecp/image_top_screws.jpg";
 import image_underside_screws from "../../assets/images/community/delonghi-ecp/image_underside_screws.jpg";
+import image_water_tube_cut from "../../assets/images/community/delonghi-ecp/image_water_tube_cut.png";
 import image_wiring_diagram from "../../assets/images/community/delonghi-ecp/image_wiring_diagram.png";
 import image_wiring_diagram_with_switch from "../../assets/images/community/delonghi-ecp/image_wiring_diagram_with_switch.png";
 import CB from "../../components/Checkbox.astro";
@@ -196,9 +197,10 @@ The most important factor is that the technical specifications of your parts are
       1. <CB>[PTFE Tube, Color: 2 x 4mm White](https://www.aliexpress.us/item/2251832544541096.html)</CB>
       1. <CB>[Pressure T-Fitting, Color: PE, Specification: 4mm 5/32 inch](https://www.aliexpress.us/item/3256808320030680.html)</CB>
       1. <CB>[90° Pressure Fitting, Color: 4-02, Specification: PLF](https://www.aliexpress.us/item/3256802393459934.html)</CB>
+      1. <CB>[2x4mm hose, Color: 3PCS 150MM or 200MM Tubes](https://www.aliexpress.us/item/3256810590225360.html) - It is far easier to work with these than to cut the stock hose, though that is an option althhough not covered by this guide. You get 3 hoses with this purchase.</CB>
       1. <CB><Tokens type="eu" icon>European Version</Tokens> [21mm x 15mm DPST On/Off Rocker Switch, Color: 4Pin Black](https://www.aliexpress.us/item/2255800768510409.html) — Replace the stock rocker switch with a 21mm x 15mm 4-pin DPST Black On/Off switch. This modification is required to bypass the factory ECO mode and ensure the machine remains powered for consistent thermal stability. </CB>
       1. <CB><Tokens type="usa" icon>American Version</Tokens> [3-Prong Power Cord](https://www.amazon.com/dp/B07BQCMPF2) — Upgrades the stock 2-prong cord to a grounded connection. Required given the extent of the modifications.</CB>
-      1. <CB><Tokens type="usa" icon>American Version</Tokens><Tokens type="optional" icon>Optional</Tokens> [Grounded Outlet Adapter with On/Off Switch](https://www.amazon.com/gp/product/B0DQDFM1CN?th=1) — This modification removes the machine's power knob. Without this, you need to unplug the machine to cut power.</CB>
+      1. <CB><Tokens type="optional" icon>Optional</Tokens><Tokens type="usa" icon>American Version</Tokens> [Grounded Outlet Adapter with On/Off Switch](https://www.amazon.com/gp/product/B0DQDFM1CN?th=1) — This modification removes the machine's power knob. Without this, you need to unplug the machine to cut power.</CB>
       1. <CB><Tokens type="optional" icon>Optional</Tokens> [Rancilio-style steam wand](https://www.aliexpress.us/item/3256808331478432.html) — Highly recommended upgrade. The stock Pannarello wand lacks finesse. This one includes a one-hole and three-hole tip.</CB>
 
 ### Tools & Consumables
@@ -383,10 +385,15 @@ The pump is not polarized. It does not matter which wire connects to which termi
 
 ---
 
-## Prepare the Water Line
+## Prepare the Water Lines
 
-<CB>**Cut the Pump-to-Boiler Water Line** — While the frame is still out, cut the water line running from the pump to the boiler. The cut should be made closer to the overpressure valve, not the boiler. It must be straight and clean. Use a razor-sharp blade to avoid crushing the hose. Scissors will crush the hose and are not a good choice.</CB>
-      <Lightbox src={image_cut_hose} alt="Cut pump-to-boiler hose" width={300}/>
+  1. <CB>**Disconnect the Boiler Side of the Pump-to-Boiler Water Line** — While the frame is still out, disconnect the water line running from the pump to the boiler. To do this, remove the clip that secures the boiler end of the line. Remove it using a pair of pliers and set it aside. Do not discard. This will leave the tube connected only to the pump. <Tokens type="warn" icon>When you remove this tube, **if** a small gasket also comes out, don't panic. Set it aside until you are ready to attach a new tube to the boiler.</Tokens></CB>
+      <Lightbox src={image_remove_boiler_hose} alt="Removing the boiler water tube" width={300} caption="Remove the the side of the water tube that is connected to the boiler."/>
+
+  1. <CB>**Cut the Copper Sleeve from the Boiler Side of the Pump-to-Boiler Water Line** — Now that the boiler side of the tube has been removed, cut the disconnected end right behind the copper sleeve. Cuts **must** be clean and straight and you must take care not to crush or damage the tube in any way as you cut. Do not use scissors!</CB>
+      <Lightbox src={image_water_tube_cut} alt="Cutting the water tubes" width={300} caption="Cut just behind the copper sleeve to give you the most length and play to work with."/>
+  1. <CB>**Prepare the Replacement Boiler Side Tube** — Take one of the replacement copper sleeved tubes you purchased, and once again, cut only one end, right behind the copper sleeve just as you did above. Cuts **must** be clean and straight and you must take care not to crush or damage the tube in any way as you cut. Do not use scissors!</CB>
+  1. <CB>**Attach the Replacement Boiler Side Tube** — Obtain one of the replacement tubes you purchased. If the gasket came out in the previous step, slide the gasket onto the copper sleeved end of this tube. Then, insert this end into the boiler. Push it in firmly as far as it can go. Grab the clip you previously removed and slide it back into place. It should slide in easily. If you meet resistance, your tube has not been pushed in firmly enough.</CB>
 
 ---
 
@@ -397,7 +404,7 @@ The pump is not polarized. It does not matter which wire connects to which termi
 1. <CB>**Secure the <Tokens color="green">Green</Tokens> Pump Wire** — The unconnected end of the <Tokens color="green">green</Tokens> pump wire will be connected to the <Tokens color="grey">PCB</Tokens> later. Secure it with tape against the outside of the machine for now.</CB>
 1. <CB>**Connect the Boiler to the T-Fitting** — Push the cut end of the boiler water line into the <Tokens color="grey">t-fitting</Tokens>. Press firmly until it is seated snugly, then give it a light tug to confirm.</CB>
 1. <CB>**Connect the Pump to the T-Fitting** — Push the cut end of the pump water line into the <Tokens color="grey">t-fitting</Tokens>. Press firmly until it is seated snugly, then give it a light tug to confirm.</CB>
-1. <CB>**Prepare the Pressure Transducer (PT) Tube** — Cut at least a **75mm** length of <Tokens color="grey">2mm x 4mm PTFE tubing</Tokens>. Cuts must be clean and straight.</CB>
+1. <CB>**Prepare the Pressure Transducer (PT) Tube** — Cut at least a **75mm** length of <Tokens color="grey">2mm x 4mm PTFE tubing</Tokens>. Cuts **must** be clean and straight and you must take care not to crush or damage the tube in any way as you cut. Do not use scissors!</CB>
 1. <CB>**Install the Gasket and Transducer** — Drop the <Tokens color="grey">silicone gasket</Tokens> into the threaded opening of the <Tokens color="grey">90° fitting</Tokens>.</CB>
 1. <CB>**Connect the 90° Fitting and the Pressure Transducer** — Screw on the <Tokens color="grey">pressure transducer</Tokens> onto the threaded end of the <Tokens color="grey">90° fitting</Tokens>. <Tokens type="warn" icon>Hand-tighten only. Do **not** overtighten.</Tokens></CB>
 1. <CB>**Connect the PT Tube** — Attach one end to the <Tokens color="grey">90° fitting</Tokens> using the same push-fit method.</CB>
