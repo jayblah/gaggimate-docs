@@ -3,7 +3,7 @@ layout: ../../layouts/Layout.astro
 title: Profiles
 description: "GaggiMate Brew Profile Guide: Create custom espresso profiles, import community recipes, and master pressure profiling."
 section: Usage
-order: 18
+order: 20
 ---
 
 ## Introduction

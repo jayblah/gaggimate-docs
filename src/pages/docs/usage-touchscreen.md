@@ -3,7 +3,7 @@ layout: ../../layouts/Layout.astro
 title: Touch Screen Usage
 description: "GaggiMate Touch UI Guide: Learn how to navigate the GaggiMate espresso controller interface."
 section: Usage
-order: 17
+order: 19
 ---
 
 ## 📘 Table of content.

@@ -3,7 +3,7 @@ layout: ../../layouts/Layout.astro
 title: First Start
 description: "GaggiMate First Start Guide: How to configure WiFi."
 section: Usage
-order: 15
+order: 17
 ---
 
 So you flashed and installed your GaggiMate kit. Here's what to do next!
